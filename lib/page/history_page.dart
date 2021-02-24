@@ -127,8 +127,11 @@ class _HistoryPageState extends State<HistoryPage> {
                                                                         .authStorage
                                                                         .read(
                                                                             'id'));
-                                                                print(
-                                                                    "Success");
+                                                                _globalKey.currentState
+                                                                    .showSnackBar(SnackBar(
+                                                                  content: Text(
+                                                                      "Sukses menambahkan ke tonton nanti"),
+                                                                ));
                                                               }
                                                             });
                                                             break;

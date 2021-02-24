@@ -121,7 +121,11 @@ class _WatchLaterPageState extends State<WatchLaterPage> {
                                                                     .authStorage
                                                                     .read(
                                                                     'id'));
-                                                            print("Success");
+                                                            _globalKey.currentState
+                                                                .showSnackBar(SnackBar(
+                                                              content: Text(
+                                                                  "Sukses menghapus video dari tonton nanti"),
+                                                            ));
                                                           }
                                                         });
                                                         break;

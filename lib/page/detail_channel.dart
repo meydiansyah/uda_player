@@ -288,12 +288,10 @@ class _DetailChannelState extends State<DetailChannel> {
                                   future:
                                       GetApi.getPlaylist(channelId: widget.id),
                                   builder: (context, snapshotPlaylist) {
-                                    if (snapshot.hasData) {
+                                    if (snapshotPlaylist.hasData) {
                                       return Column(
                                         children: snapshotPlaylist.data.items
                                             .map((data) {
-//                                          getDetailPlaylist(data.id);
-
                                           return Padding(
                                             padding: const EdgeInsets.symmetric(
                                                 vertical: 5.0),
@@ -401,7 +399,9 @@ class _DetailChannelState extends State<DetailChannel> {
                                         }).toList(),
                                       );
                                     } else {
-                                      return Container();
+                                      return Center(
+                                          child: Text("Memuat . . .",
+                                              style: TextStyle(color: GREEN)));
                                     }
                                   },
                                 )

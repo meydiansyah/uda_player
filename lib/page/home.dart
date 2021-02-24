@@ -292,7 +292,11 @@ class _HomePageState extends State<HomePage> {
                                                                 Future.delayed(Duration(seconds: 4), () {
                                                                   if(!cancel) {
                                                                     ComponentVoid.insertWatchLater(videoId: data.id, userId: storage.authStorage.read('id'));
-                                                                    print("Success");
+                                                                    _globalKey.currentState
+                                                                        .showSnackBar(SnackBar(
+                                                                      content: Text(
+                                                                          "Sukses menambahkan ke tonton nanti"),
+                                                                    ));
                                                                   }
                                                                 });
                                                                 break;

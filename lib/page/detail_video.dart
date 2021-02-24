@@ -52,6 +52,7 @@ class _DetailVideoState extends State<DetailVideo> {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
       child: Scaffold(
+        key: _globalKey,
           backgroundColor: Color(0xff091a10),
           body: Stack(
             children: [
@@ -162,7 +163,11 @@ class _DetailVideoState extends State<DetailVideo> {
                                                           userId: storage
                                                               .authStorage
                                                               .read('id'));
-                                                  print("Success");
+                                                  _globalKey.currentState
+                                                      .showSnackBar(SnackBar(
+                                                    content: Text(
+                                                        "Sukses menambahkan ke tonton nanti"),
+                                                  ));
                                                 }
                                               });
                                               break;
