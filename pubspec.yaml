@@ -1,0 +1,53 @@
+name: intermediate_udacoding
+description: Flutter applications from udacoding submissions
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.1
+
+  #  State management dependencies
+  get: ^3.24.0
+  get_storage: ^1.4.0
+  path_provider: ^1.6.27
+  cached_network_image: ^2.5.0
+
+  # Helper
+  intl: ^0.16.1
+  youtube_player_flutter: ^7.0.0+7
+  flutter_inappwebview: ^4.0.0+4
+
+  # json
+  http: ^0.12.2
+
+  #  user interface
+  flutter_linkify: ^4.0.2
+  url_launcher: ^5.7.10
+  syncfusion_flutter_charts: ^18.3.50
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_launcher_icons: ^0.8.1
+
+  integration_test:
+    sdk: flutter
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/udaplayer-icon.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
