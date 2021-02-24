@@ -46,10 +46,10 @@ class _RegisterPageState extends State<RegisterPage> {
                 children: [
                   ComponentWidget.logoUda(),
                   Container(
-                    height: Get.height / 1.5,
+                    height: MediaQuery.of(context).viewInsets.bottom != 0 ? Get.height / 2.2 : Get.height / 1.5,
                     width: Get.width,
                     child: Container(
-                      margin: EdgeInsets.fromLTRB(30, 0, 30, 30),
+                      margin: EdgeInsets.fromLTRB(30, 10, 30, 30),
                       decoration: ComponentWidget.cardDecoration(),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(10),
@@ -147,8 +147,8 @@ class _RegisterPageState extends State<RegisterPage> {
 
   Widget _buttonRegister() {
     bool emptyValue() {
-      if (usernameController.text.length < 5 ||
-          passwordController.text.length < 5 ||
+      if (usernameController.text.length < 7 ||
+          passwordController.text.length < 7 ||
           emailController.text.isEmpty ||
           confirmPasswordController.text != passwordController.text) {
         return true;
@@ -409,8 +409,8 @@ class _RegisterPageState extends State<RegisterPage> {
       if (title == 'password' || title == 'confirm password') {
         if ((passwordController.text.length > 0 &&
                 passwordController.text.length > 0) &&
-            (passwordController.text.length > 8 &&
-                passwordController.text.length > 8) &&
+            (passwordController.text.length >= 8 &&
+                passwordController.text.length >= 8) &&
             (passwordController.text == confirmPasswordController.text)) {
           return SUCCESS;
         } else {

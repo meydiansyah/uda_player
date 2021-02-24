@@ -180,7 +180,6 @@ class _SettingsPageState extends State<SettingsPage> {
                                     type: MaterialType.transparency,
                                     child: ListTile(
                                       onTap: () {
-                                        Navigator.pop(context);
                                         return Navigator.push(
                                             context,
                                             MaterialPageRoute(
